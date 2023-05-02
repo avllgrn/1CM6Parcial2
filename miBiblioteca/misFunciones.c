@@ -49,3 +49,22 @@ float calculaTangente(float xGRados){
 float convierteARadianes(float xGrados){
     return xGrados*M_PI/180;
 }
+
+int menorQue(int x, int y){
+    return x < y;
+}
+int menorIgual(int x, int y){
+    return x <= y;
+}
+int mayorQue(int x, int y){
+    return x > y;
+}
+int mayorIgual(int x, int y){
+    return x >= y;
+}
+int diferenteDe(int x, int y){
+    return x != y;
+}
+int IdenticoA(int x, int y){
+    return x == y;
+}

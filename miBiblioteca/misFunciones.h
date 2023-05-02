@@ -15,7 +15,12 @@ float calculaCoseno(float xGRados);
 void calculaTangenteVacia(void);
 float calculaTangente(float xGRados);
 
-
+int menorQue(int x, int y);
+int menorIgual(int x, int y);
+int mayorQue(int x, int y);
+int mayorIgual(int x, int y);
+int diferenteDe(int x, int y);
+int IdenticoA(int x, int y);
 
 
 
