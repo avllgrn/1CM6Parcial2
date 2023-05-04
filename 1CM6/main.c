@@ -7,8 +7,11 @@ int main(void){
     printf("Ingresa tu edad ");
     scanf("%d",&edad);
 
-    if(edad <= 17){
+    if(edad < 18){
         printf("NO pasas ='^(");
+    }
+    else{
+        printf("Bienvenid@ =^)");
     }
 
     return 0;
