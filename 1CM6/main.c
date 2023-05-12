@@ -2,22 +2,25 @@
 
 int main(void){
 
-    int edad;
+    char situacion;
 
-    printf("Ingresa tu edad ");
-    scanf("%d",&edad);
+    printf("Ingresa tu situacion ");
+    scanf("%c",&situacion);
 
-    if(edad >=130){
-        printf("Error! Edad muy grande");
+    if(situacion == 'R'){
+        printf("Situacion Regular");
     }
-    else if(edad >= 18){
-        printf("Pase Ud.! =^)");
+    else if(situacion == 'r'){
+        printf("Situacion regular");
     }
-    else if(edad >= 0){
-        printf("NO pasas ='^(");
+    else if(situacion == 'I'){
+        printf("Situacion Irregular");
+    }
+    else if(situacion == 'i'){
+        printf("Situacion irregular");
     }
     else{
-        printf("Error! Edad negativa");
+        printf("Situacion Invalida");
     }
 
     return 0;
