@@ -1,33 +1,26 @@
 #include <stdio.h>
-#include <math.h>
 
 int main(void){
 
-    float a,b,c,discriminante,x1,x2;
+    int edad;
 
-    //1. Pide dato(s)
-    printf("Ingresa a ");
-    scanf("%f",&a);
-    printf("Ingresa b ");
-    scanf("%f",&b);
-    printf("Ingresa c ");
-    scanf("%f",&c);
+    printf("Ingresa tu edad ");
+    scanf("%d",&edad);
 
-    discriminante = pow(b,2)-4*a*c;
-
-    if(discriminante < 0){//Si la condicion es verdadera, no hagas 2  ni 3
-        printf("\nError! Raices imaginarias...\n");
+    if(edad < 0){
+        printf("Error! Edad negativa");
     }
     else{
-        if(a==0){//Si la condicion es verdadera, no hagas 2  ni 3
-            printf("\nError! Raices indeterminadas...\n");
+        if(edad < 18){
+            printf("NO pasas ='^(");
         }
         else{
-            //2. Calcula formula(s)
-            x1 = (-b+sqrt(pow(b,2)-4*a*c))/(2*a);
-            x2 = (-b-sqrt(pow(b,2)-4*a*c))/(2*a);
-            //3. Muestra resultado(s)
-            printf("\nx1 = %f\nx2 = %f\n",x1,x2);
+            if(edad < 130){
+                printf("Pase Ud.! =^)");
+            }
+            else{
+                printf("Error! Edad muy grande");
+            }
         }
     }
 
