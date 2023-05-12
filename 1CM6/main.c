@@ -2,28 +2,22 @@
 
 int main(void){
 
-    float x, y;
+    int edad;
 
-    printf("Ingresa x ");
-    scanf("%f",&x);
-    printf("Ingresa y ");
-    scanf("%f",&y);
+    printf("Ingresa tu edad ");
+    scanf("%d",&edad);
 
-    if(x>0){
-        if(y>0){
-            printf("Cuadrante I");
-        }
-        else{
-            printf("Cuadrante IV");
-        }
+    if(edad < 0){
+        printf("Error! Edad negativa");
+    }
+    else if(edad < 18){
+        printf("NO pasas ='^(");
+    }
+    else if(edad < 130){
+        printf("Pase Ud.! =^)");
     }
     else{
-        if(y>0){
-            printf("Cuadrante II");
-        }
-        else{
-            printf("Cuadrante III");
-        }
+        printf("Error! Edad muy grande");
     }
 
     return 0;
