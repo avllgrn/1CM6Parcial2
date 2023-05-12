@@ -2,25 +2,45 @@
 
 int main(void){
 
-    char situacion;
+    float x, y;
 
-    printf("Ingresa tu situacion ");
-    scanf("%c",&situacion);
+    printf("Ingresa x ");
+    scanf("%f",&x);
+    printf("Ingresa y ");
+    scanf("%f",&y);
 
-    if(situacion == 'R'){
-        printf("Situacion Regular");
+    if(x>0){
+        if(y>0){
+            printf("Cuadrante I");
+        }
+        else if(y==0){
+            printf("X+");
+        }
+        else{
+            printf("Cuadrante IV");
+        }
     }
-    else if(situacion == 'r'){
-        printf("Situacion regular");
-    }
-    else if(situacion == 'I'){
-        printf("Situacion Irregular");
-    }
-    else if(situacion == 'i'){
-        printf("Situacion irregular");
+    else if(x==0){
+        if(y>0){
+            printf("Y+");
+        }
+        else if(y==0){
+            printf("Origen");
+        }
+        else{
+            printf("Y-");
+        }
     }
     else{
-        printf("Situacion Invalida");
+        if(y>0){
+            printf("Cuadrante II");
+        }
+        else if(y==0){
+            printf("X-");
+        }
+        else{
+            printf("Cuadrante III");
+        }
     }
 
     return 0;
