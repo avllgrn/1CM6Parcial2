@@ -1,28 +1,28 @@
 #include <stdio.h>
 
-int enRangoParaIncisoA(int x);
-int enRangoParaIncisoB(int x);
-int enRangoParaIncisoC(int x);
-int enRangoParaIncisoD(int x);
-int fueraDeRangoParaIncisoE(int x);
+int esNumerico(char x);
+int esMayuscula(char x);
+int esMinuscula(char x);
+int esLetra(char x);
+int esCacraterEspecial(char x);
 
 int main(void){
 
-    int n;
+    char c;
 
     printf("Ingresa tu numero ");
-    scanf("%d",&n);
+    scanf("%c",&c);
 
-    printf("%d\n",enRangoParaIncisoA(n));
-    printf("%d\n",enRangoParaIncisoB(n));
-    printf("%d\n",enRangoParaIncisoC(n));
-    printf("%d\n",enRangoParaIncisoD(n));
-    printf("%d\n",fueraDeRangoParaIncisoE(n));
+    printf("%d\n",esNumerico(c));
+    printf("%d\n",esMayuscula(c));
+    printf("%d\n",esMinuscula(c));
+    printf("%d\n",esLetra(c));
+    printf("%d\n",esCacraterEspecial(c));
 
     return 0;
 }
 
-int enRangoParaIncisoA(int x){
+int esNumerico(char x){
     if(x<48){
         return 0;
     }
@@ -35,7 +35,7 @@ int enRangoParaIncisoA(int x){
         }
     }
 }
-int enRangoParaIncisoB(int x){
+int esMayuscula(char x){
     if(x<65){
         return 0;
     }
@@ -48,7 +48,7 @@ int enRangoParaIncisoB(int x){
         }
     }
 }
-int enRangoParaIncisoC(int x){
+int esMinuscula(char x){
     if(x<97){
         return 0;
     }
@@ -61,12 +61,12 @@ int enRangoParaIncisoC(int x){
         }
     }
 }
-int enRangoParaIncisoD(int x){
-    if(enRangoParaIncisoB(x)){
+int esLetra(char x){
+    if(esMayuscula(x)){
         return 1;
     }
     else{
-        if(enRangoParaIncisoC(x)){
+        if(esMinuscula(x)){
             return 1;
         }
         else{
@@ -74,12 +74,12 @@ int enRangoParaIncisoD(int x){
         }
     }
 }
-int fueraDeRangoParaIncisoE(int x){
-    if(enRangoParaIncisoA(x)){
+int esCacraterEspecial(char x){
+    if(esNumerico(x)){
         return 0;
     }
     else{
-        if(enRangoParaIncisoD(x)){
+        if(esLetra(x)){
             return 0;
         }
         else{
