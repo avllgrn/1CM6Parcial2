@@ -23,26 +23,28 @@ int main(void){
     printf("Cual es tu opcion? ");
     scanf("%d",&opcion);
 
-    if(opcion==1){
-        opcionNumero();
-    }
-    else if(opcion==2){
-        opcionMayuscula();
-    }
-    else if(opcion==3){
-        opcionMinuscula();
-    }
-    else if(opcion==4){
-        opcionLetra();
-    }
-    else if(opcion==5){
-        opcionCaracterEspecial();
-    }
-    else if(opcion==6){
-        printf("Adios!");
-    }
-    else{
-        printf("Opcion invalida!");
+    switch(opcion){
+        case 1:
+            opcionNumero();
+            break;
+        case 2:
+            opcionMayuscula();
+            break;
+        case 3:
+            opcionMinuscula();
+            break;
+        case 4:
+            opcionLetra();
+            break;
+        case 5:
+            opcionCaracterEspecial();
+            break;
+        case 6:
+            printf("Adios!");
+            break;
+        default:
+            printf("Opcion invalida!");
+            break;
     }
 
     return 0;
