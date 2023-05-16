@@ -1,47 +1,160 @@
 #include <stdio.h>
 
+void opcionNumero(void);
+int esNumero(char x);
+void opcionMayuscula(void);
+int esMayuscula(char x);
+void opcionMinuscula(void);
+int esMinuscula(char x);
+void opcionLetra(void);
+int esLetra(char x);
+void opcionCaracterEspecial(void);
+int esCaracterEspecial(char x);
+
+
 int main(void){
+    int opcion;
+    printf("1. Numero\n");
+    printf("2. Mayuscula\n");
+    printf("3. Minuscula\n");
+    printf("4. Letra\n");
+    printf("5. Caracter Especial\n");
+    printf("6. Salir\n");
+    printf("Cual es tu opcion? ");
+    scanf("%d",&opcion);
 
-    float x, y;
-
-    printf("Ingresa x ");
-    scanf("%f",&x);
-    printf("Ingresa y ");
-    scanf("%f",&y);
-
-    if(x>0){
-        if(y>0){
-            printf("Cuadrante I");
-        }
-        else if(y==0){
-            printf("X+");
-        }
-        else{
-            printf("Cuadrante IV");
-        }
+    if(opcion==1){
+        opcionNumero();
     }
-    else if(x==0){
-        if(y>0){
-            printf("Y+");
-        }
-        else if(y==0){
-            printf("Origen");
-        }
-        else{
-            printf("Y-");
-        }
+    else if(opcion==2){
+        opcionMayuscula();
+    }
+    else if(opcion==3){
+        opcionMinuscula();
+    }
+    else if(opcion==4){
+        opcionLetra();
+    }
+    else if(opcion==5){
+        opcionCaracterEspecial();
+    }
+    else if(opcion==6){
+        printf("Adios!");
     }
     else{
-        if(y>0){
-            printf("Cuadrante II");
-        }
-        else if(y==0){
-            printf("X-");
-        }
-        else{
-            printf("Cuadrante III");
-        }
+        printf("Opcion invalida!");
     }
 
     return 0;
+}
+
+void opcionNumero(void){
+    char caracter;
+    printf("Ingresa tu caracter ");
+    scanf(" %c", &caracter);
+    if(esNumero(caracter)){
+        printf("%c ES un caracter numerico.",caracter);
+    }
+    else{
+        printf("%c NO es un caracter numerico.",caracter);
+    }
+}
+int esNumero(char x){
+    if(x<48){
+        return 0;
+    }
+    else if(x<=57){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+void opcionMayuscula(void){
+    char caracter;
+    printf("Ingresa tu caracter ");
+    scanf(" %c",&caracter);
+    if(esMayuscula(caracter)){
+        printf("%c ES una mayuscula.",caracter);
+    }
+    else{
+        printf("%c NO es una mayuscula.",caracter);
+    }
+}
+int esMayuscula(char x){
+    if(x<65){
+        return 0;
+    }
+    else if(x<=90){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+void opcionMinuscula(void){
+    char caracter;
+    printf("Ingresa tu caracter ");
+    scanf(" %c",&caracter);
+    if(esMinuscula(caracter)){
+        printf("%c ES una minuscula.",caracter);
+    }
+    else{
+        printf("%c NO es una minuscula.",caracter);
+    }
+}
+int esMinuscula(char x){
+    if(x<97){
+        return 0;
+    }
+    else if(x<=122){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+void opcionLetra(void){
+    char caracter;
+    printf("Ingresa tu caracter ");
+    scanf(" %c",&caracter);
+    if(esLetra(caracter)){
+        printf("%c ES una letra.",caracter);
+    }
+    else{
+        printf("%c NO es una letra.",caracter);
+    }
+}
+int esLetra(char x){
+    if(esMayuscula(x)){
+        return 1;
+    }
+    else if(esMinuscula(x)){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+void opcionCaracterEspecial(void){
+    char caracter;
+    printf("Ingresa tu caracter ");
+    scanf(" %c",&caracter);
+    if(esCaracterEspecial(caracter)){
+        printf("%c ES un caracter especial.",caracter);
+    }
+    else{
+        printf("%c NO es un caracter especial.",caracter);
+    }
+}
+int esCaracterEspecial(char x){
+    if(esNumero(x)){
+        return 0;
+    }
+    else if(esLetra(x)){
+        return 0;
+    }
+    else{
+        return 1;
+    }
 }
