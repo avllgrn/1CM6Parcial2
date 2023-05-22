@@ -3,10 +3,10 @@
 
 int main(void){
 
-    for( ; 1 ; ){//Mientras la condicion sea verdadera (1)
+    do{
         //Repite este conjunto de instrucciones
         printf("Hola! =^) ");
-    }
+    }while( 1 );//Mientras la condicion sea verdadera (1)
 
     return 0;
 }
