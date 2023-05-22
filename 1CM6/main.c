@@ -3,7 +3,7 @@
 
 int main(void){
 
-    while( 1 ){//Mientras la condicion sea verdadera (1)
+    for( ; 1 ; ){//Mientras la condicion sea verdadera (1)
         //Repite este conjunto (vacio) de instrucciones
     }
 
