@@ -3,9 +3,9 @@
 
 int main(void){
 
-    for( ; 1 ; ){//Mientras la condicion sea verdadera (1)
+    do{
         //Repite este conjunto (vacio) de instrucciones
-    }
+    }while( 1 );//Mientras la condicion sea verdadera (1)
 
     return 0;
 }
