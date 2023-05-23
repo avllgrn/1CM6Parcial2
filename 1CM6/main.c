@@ -3,12 +3,16 @@
 
 int main(void){
 
-    int i;
+    int i, ini, fin, inc;
 
-    i=10;
-    while( i >= 1 ){
+    printf("Ingresa ini ");scanf("%d",&ini);
+    printf("Ingresa fin ");scanf("%d",&fin);
+    printf("Ingresa inc ");scanf("%d",&inc);
+
+    i=ini;
+    while( i <= fin ){
         printf("%d ",i);
-        i = i-1;
+        i = i+inc;
     }
 
     return 0;
