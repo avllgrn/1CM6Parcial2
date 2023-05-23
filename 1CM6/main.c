@@ -3,17 +3,31 @@
 
 int main(void){
 
-    int i, ini, fin, dec;
+    int i, ini, fin, salto;
 
     printf("Ingresa ini ");scanf("%d",&ini);
     printf("Ingresa fin ");scanf("%d",&fin);
-    printf("Ingresa dec ");scanf("%d",&dec);
+    printf("Ingresa salto ");scanf("%d",&salto);
+    salto = abs(salto);
 
-    i=ini;
-    while( i >= fin ){
-        printf("%d ",i);
-        i = i-dec;
+    if(salto == 0){
+        printf("Error! No hay conteo");
     }
+    else if(ini < fin){
+        i=ini;
+        while( i <= fin ){
+            printf("%d ",i);
+            i = i+salto;
+        }
+    }
+    else{
+        i=ini;
+        while( i >= fin ){
+            printf("%d ",i);
+            i = i-salto;
+        }
+    }
+
 
     return 0;
 }
