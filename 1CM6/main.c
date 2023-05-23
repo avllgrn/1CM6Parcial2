@@ -3,12 +3,12 @@
 
 int main(void){
 
-    int i, ini, fin, salto;
+    float i, ini, fin, salto;
 
-    printf("Ingresa ini ");scanf("%d",&ini);
-    printf("Ingresa fin ");scanf("%d",&fin);
-    printf("Ingresa salto ");scanf("%d",&salto);
-    salto = abs(salto);
+    printf("Ingresa ini ");scanf("%f",&ini);
+    printf("Ingresa fin ");scanf("%f",&fin);
+    printf("Ingresa salto ");scanf("%f",&salto);
+    salto = fabs(salto);
 
     if(salto == 0){
         printf("Error! No hay conteo");
@@ -16,14 +16,14 @@ int main(void){
     else if(ini < fin){
         i=ini;
         while( i <= fin ){
-            printf("%d ",i);
+            printf("%f ",i);
             i = i+salto;
         }
     }
     else{
         i=ini;
         while( i >= fin ){
-            printf("%d ",i);
+            printf("%f ",i);
             i = i-salto;
         }
     }
