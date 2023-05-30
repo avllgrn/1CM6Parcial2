@@ -1,12 +1,14 @@
 #include <stdio.h>
 
 int main(void){
-    int i;
+    int i,j;
 
     i=0;
-    while(i<256){
-        printf("%d -> %c\n",i,i);
+    j=0;
+    while(i<10 && j<100){
+        printf("i=%d j=%d\n",i,j);
         i = i+1;
+        j = j+10;
     }
 
     return 0;
