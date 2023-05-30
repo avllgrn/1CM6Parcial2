@@ -1,14 +1,11 @@
 #include <stdio.h>
 
 int main(void){
-    int n,i;
-    printf("Ingresa n ");
-    scanf("%d",&n);
+    int i;
 
-    printf("%d ",n);
-    i=1;
-    while(i<=n){
-        printf("*");
+    i=0;
+    while(i<256){
+        printf("%d -> %c\n",i,i);
         i = i+1;
     }
 
