@@ -1,33 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#include "misFunciones.h"
+
+float f(float x);
 
 int main(void){
+    float x,ini,fin,paso;
+    int i;
 
-    float i, ini, fin, salto;
+    printf("Dame ini ");scanf("%f",&ini);
+    printf("Dame fin ");scanf("%f",&fin);
+    printf("Dame paso ");scanf("%f",&paso);
+    printf("\n\n");
 
-    printf("Ingresa ini ");scanf("%f",&ini);
-    printf("Ingresa fin ");scanf("%f",&fin);
-    printf("Ingresa salto ");scanf("%f",&salto);
-    salto = fabs(salto);
+    printf("x\t\t| f(x) = sin(x)\n");
+    for(i=1;i<30;i=i+1)
+        printf("-");
+    printf("\n");
 
-    if(salto == 0){
-        printf("Error! No hay conteo");
+    x = ini;
+    while(x<=fin){
+        printf("%f\t| %f\n",x,f(x));
+        x = x+paso;
     }
-    else if(ini < fin){
-        i=ini;
-        while( i <= fin ){
-            printf("%f ",i);
-            i = i+salto;
-        }
-    }
-    else{
-        i=ini;
-        while( i >= fin ){
-            printf("%f ",i);
-            i = i-salto;
-        }
-    }
-
 
     return 0;
+}
+
+float f(float x){
+    return sin(convierteARadianes(x));
 }
