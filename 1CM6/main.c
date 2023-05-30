@@ -1,10 +1,41 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void){
-    int i,j,k;
+    int a=5;
+    int b=3;
+    printf("Inicialmente: a = %d \tb = %d\n\n",a,b);
 
-    for(i=0,j=5,k=100; k>0 ; i=i+1,j=j+5,k=k-10)
-        printf("i=%d j=%d k=%d\n",i,j,k);
+    a += b;
+    printf("Tras a += b : a = %d \tb = %d\n\n",a,b);
+
+    a -= b;
+    printf("Tras a -= b : a = %d \tb = %d\n\n",a,b);
+
+    a *= b;
+    printf("Tras a *= b : a = %d \tb = %d\n\n",a,b);
+
+    a /= b;
+    printf("Tras a /= b : a = %d \tb = %d\n\n",a,b);
+
+    a %= b;
+    printf("Tras a %%= b : a = %d \tb = %d\n\n",a,b);
+    system("pause");
+    system("cls");
+
+    printf("Inicialmente : a = %d\n\n",a);
+
+    printf("Si se usa ++a: a = %d\n",++a);
+    printf("Tras usar ++a: a = %d\n\n",a);
+
+    printf("Si se usa --a: a = %d\n",--a);
+    printf("Tras usar --a: a = %d\n\n",a);
+
+    printf("Si se usa a++: a = %d\n",a++);
+    printf("Tras usar a++: a = %d\n\n",a);
+
+    printf("Si se usa a--: a = %d\n",a--);
+    printf("Tras usar a--: a = %d\n\n",a);
 
     return 0;
 }
