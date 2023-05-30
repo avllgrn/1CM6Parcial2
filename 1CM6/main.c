@@ -2,40 +2,16 @@
 #include <stdlib.h>
 
 int main(void){
-    int a=5;
-    int b=3;
-    printf("Inicialmente: a = %d \tb = %d\n\n",a,b);
+    int n, sumaAcumulada=0;//Si no se inicializa en cero, acumulara basura
 
-    a += b;
-    printf("Tras a += b : a = %d \tb = %d\n\n",a,b);
+    do{
+        printf("Dame n ");
+        scanf("%d",&n);
 
-    a -= b;
-    printf("Tras a -= b : a = %d \tb = %d\n\n",a,b);
+        sumaAcumulada = sumaAcumulada + n;
+    }while(n != 0);
 
-    a *= b;
-    printf("Tras a *= b : a = %d \tb = %d\n\n",a,b);
-
-    a /= b;
-    printf("Tras a /= b : a = %d \tb = %d\n\n",a,b);
-
-    a %= b;
-    printf("Tras a %%= b : a = %d \tb = %d\n\n",a,b);
-    system("pause");
-    system("cls");
-
-    printf("Inicialmente : a = %d\n\n",a);
-
-    printf("Si se usa ++a: a = %d\n",++a);
-    printf("Tras usar ++a: a = %d\n\n",a);
-
-    printf("Si se usa --a: a = %d\n",--a);
-    printf("Tras usar --a: a = %d\n\n",a);
-
-    printf("Si se usa a++: a = %d\n",a++);
-    printf("Tras usar a++: a = %d\n\n",a);
-
-    printf("Si se usa a--: a = %d\n",a--);
-    printf("Tras usar a--: a = %d\n\n",a);
+    printf("Suma acumulada = %d",sumaAcumulada);
 
     return 0;
 }
