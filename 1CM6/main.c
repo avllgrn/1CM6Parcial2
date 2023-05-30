@@ -8,7 +8,7 @@ int main(void){
         printf("Dame n ");
         scanf("%d",&n);
 
-        sumaAcumulada = sumaAcumulada + n;
+        sumaAcumulada += n;
     }while(n != 0);
 
     printf("Suma acumulada = %d",sumaAcumulada);
