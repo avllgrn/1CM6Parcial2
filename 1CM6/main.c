@@ -1,16 +1,19 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(void){
-    int i, n, s;
-    //1-2+3-4+5-6+7-8+9-10 + ... n
+    int i, n;
+    float x, s;
+    //-ln(1 - x), para |x| < 1
 
+    printf("Dame x ");scanf("%f",&x);
     printf("Dame n ");scanf("%d",&n);
 
     for(i=1, s=0; i<=n; i++){
-        printf("s=%d i=%d\n",s,i);
-        s = s+i;
+        printf("s=%f i=%d\n",s,i);
+        s = s+pow(x,i)/i;
     }
-    printf("\n\ns=%d\n",s);
+    printf("\n\n-ln(1 - %f) = %f\n",x,s);
 
     return 0;
 }
